@@ -3,9 +3,9 @@
 ## How to Run the Simulation
 - Install Python
 - Install the required dependency:
-  -pip install matplotlib
-- From the project root directory, run:
- - python main.py
+    <br>pip install matplotlib
+- Run:
+    <br>python main.py
 - Follow the prompts to enter scenario details.
 
 ## Command-Line Arguments or Configuration
