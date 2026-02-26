@@ -15,5 +15,5 @@
 - Review the printed forecast and generated plot.
 
 ## Troubleshooting Common Issues
-- If `matplotlib` is not found:
-  pip install matplotlib
+- If matplotlib is not found:
+  <br>pip install matplotlib
