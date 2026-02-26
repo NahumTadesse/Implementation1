@@ -17,11 +17,6 @@
 - Improve how results are displayed and add a nicer looking graph.
 
 ## Changes from Original Proposal
-- Fixed simulation configuration:
-  - Δt (time step) is fixed at 15 minutes
-  - Forecast horizon is fixed at 3 hours (180 minutes)
-  - Meal absorption uses fixed defaults: time-to-peak = 75 minutes, duration = 240 minutes
-
 - Interactive scenario setup (user input):
   - User selects the simulation start time
   - User enters starting glucose (mg/dL)
@@ -42,6 +37,6 @@
   - Exercise/stress outside the 3-hour forecast window are automatically ignored
 
 - Output:
-  - Warnings are shown for hypoglycemia-range starting glucose (< 70 mg/dL)
+  - Warnings are shown for hypoglycemia-range starting glucose < 70 mg/dL
   - Additional warning for low start glucose combined with insulin/exercise without carbs
   - Forecast prints glucose values at each time step and plots a 3-hour curve with target lines at 70 and 180 mg/dL
