@@ -8,7 +8,7 @@
 - Open a terminal in the project root directory.
 - Install the required dependency:
   <br>pip install matplotlib
-- Run the program:
+- Run:
   <br>python main.py
 - When prompted, enter the requested scenario values (start time, glucose level, meal, insulin, exercise, stress).
 - Press Enter to accept default values where provided.
