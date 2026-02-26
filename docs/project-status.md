@@ -38,7 +38,7 @@
 
 - Exercise and stress events (quantified inputs):
   - Exercise supports start time, duration, and intensity (0.0–1.0)
-  - Stress supports start time, duration, and multiplier (e.g., 1.2)
+  - Stress supports start time, duration, and multiplier (1.2)
   - Exercise/stress outside the 3-hour forecast window are automatically ignored
 
 - Output:
