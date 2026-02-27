@@ -4,7 +4,7 @@
 - 
 
 ## Mapping to UML Design
-- ![UML Diagram](UML11.png)
+- ![UML Diagram](UMLFINAL.png)
 
 ## Architectural Changes
 - 
