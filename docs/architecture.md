@@ -28,7 +28,7 @@
   Represents stress exposure with start time, duration, and glucose multiplier effect.
 
 ## Mapping to UML Design
-- ![UML Diagram](UMLFINAL1.png)
+- ![UML Diagram](UMLFINAL2.png)
 
 ## Architectural Changes
 
