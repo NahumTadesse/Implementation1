@@ -10,8 +10,6 @@
   Stores the output of the simulation, including time points and corresponding glucose values.
 - **SimParameters**  
   Stores configuration values such as the time step and forecast duration.
-- **MinimalModelState**  
-  Represents the evolving internal glucose state (current glucose level and insulin action level).
 - **MinimalModel**  
   Updates the glucose state for each time step using numerical integration.
 - **CarbAbsorption**  
@@ -33,4 +31,38 @@
 - ![UML Diagram](UMLFINAL1.png)
 
 ## Architectural Changes
-- 
+
+- Split the original glucose logic into focused model components for better organization.
+  - Added/Updated:
+    - minimal_model.py
+    - carb_absorption.py
+    - insulin_model.py
+
+- Expanded the Person class to include full physiological parameters used in calculations.
+  - Updated:
+    - person.py
+
+- Introduced a dedicated simulation layer to manage timing and execution.
+  - Added:
+    - simulator.py
+    - parameters.py
+
+- Reorganized the project into a clear folder structure:
+
+  - **entities/**
+    - person.py
+    - meal.py
+    - insulin.py
+    - exercise.py
+    - stress.py
+
+  - **models/**
+    - minimal_model.py
+    - carb_absorption.py
+    - insulin_model.py
+
+  - **simulation/**
+    - simulator.py
+    - parameters.py
+
+  - main.py (program entry point)
