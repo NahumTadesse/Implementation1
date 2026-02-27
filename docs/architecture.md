@@ -65,4 +65,4 @@
     - simulator.py
     - parameters.py
 
-  - main.py (program entry point)
+  - main.py
