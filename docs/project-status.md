@@ -13,7 +13,7 @@
 - Adjust and fine-tune parameters so the simulation better reflects how blood sugar actually behaves in real-life situations.
 - Add current glucose trend direction (rising, falling, or steady) as an input to help improve short-term forecast accuracy.
 - Test more extreme and edge-case scenarios to see how the model performs under different conditions.
-- Improve how results are displayed and add a nicer looking graph.
+- Improve how results are displayed and adding a nicer looking graph.
 
 ## Changes from Original Proposal
 - Interactive scenario setup (user input):
