@@ -14,7 +14,6 @@ MEAL_DURATION_MIN = 240
 
 
 def ask_int_range(prompt: str, default: int, lo: int, hi: int) -> int:
-    """Enter -> uses default, but default is not shown in the prompt."""
     while True:
         s = input(f"{prompt}: ").strip()
         if s == "":
@@ -31,7 +30,6 @@ def ask_int_range(prompt: str, default: int, lo: int, hi: int) -> int:
 
 
 def ask_float_range(prompt: str, default: float, lo: float, hi: float) -> float:
-    """Enter -> uses default, but default is not shown in the prompt."""
     while True:
         s = input(f"{prompt}: ").strip()
         if s == "":
@@ -48,7 +46,6 @@ def ask_float_range(prompt: str, default: float, lo: float, hi: float) -> float:
 
 
 def ask_yes_no(prompt: str, default_yes: bool = True) -> bool:
-    """Enter -> uses default, but default is not shown in the prompt."""
     s = input(f"{prompt} (y/n): ").strip().lower()
     if s == "":
         return default_yes
@@ -56,7 +53,6 @@ def ask_yes_no(prompt: str, default_yes: bool = True) -> bool:
 
 
 def ask_ampm(default: str) -> str:
-    """Enter -> uses default, but default is not shown in the prompt."""
     s = input("  AM or PM: ").strip().upper()
     if s == "":
         s = default
@@ -66,10 +62,7 @@ def ask_ampm(default: str) -> str:
 
 
 def ask_time_of_day(label: str, default_h: int, default_m: int, default_ampm: str):
-    """
-    hour (1-12), minute (0-59), AM/PM -> (hour24, minute)
-    Defaults are applied on Enter but not displayed.
-    """
+
     print(f"\n{label} time:")
     h = ask_int_range("  Hour (1-12)", default_h, 1, 12)
     m = ask_int_range("  Minute (0-59)", default_m, 0, 59)
@@ -203,15 +196,15 @@ def main():
     if ask_yes_no("\nAdd stress?", False):
         sth24, stm = ask_time_of_day("Stress START", 10, 24, "PM")
         st_dur = ask_int_range("Stress duration (min)", 30, 5, 240)
-        st_mult = ask_float_range("Stress multiplier (e.g., 1.2)", 1.2, 1.0, 2.0)
+        st_level = ask_float_range("Stress level (0.0-1.0)", 0.5, 0.0, 1.0)
 
         st_offset = minutes_since_start(start_dt, sth24, stm)
         if not in_window(st_offset):
             st_dt = start_dt + timedelta(minutes=st_offset)
             print(f"Stress at {fmt_time(st_dt)} is outside the 3-hour window; ignoring it.")
         else:
-            stress = Stress(start_min=st_offset, duration_min=st_dur, multiplier=st_mult)
-            stress_summary = f"Stress: {time_range_str(start_dt, st_offset, st_dur)}, multiplier {st_mult:.1f}"
+            stress = Stress(start_min=st_offset, duration_min=st_dur, level=st_level)
+            stress_summary = f"Stress: {time_range_str(start_dt, st_offset, st_dur)}, level {st_level:.1f}"
 
     if start_glucose < 70 and len(meals) == 0 and (len(doses) > 0 or exercise is not None):
         print("WARNING: Low start glucose + insulin/exercise without carbs may cause dangerous hypoglycemia.")

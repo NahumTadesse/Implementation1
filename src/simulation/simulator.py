@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from typing import List, Optional
 
 from entities import Person, Meal, InsulinDose, Exercise, Stress
+from entities.stress import stress_glucose_delta
 from models.minimal_model import MinimalModelState, step_euler
 from models.carb_absorption import Rg_mg_per_min
 from models.insulin_model import insulin_I_t
@@ -47,8 +48,9 @@ def run_forecast(
         if exercise and active_window(t_min, exercise.start_min, exercise.duration_min):
             state.G_mgdl -= person.rex_mgdl_per_min * exercise.intensity * dt_min
 
-        if stress and active_window(t_min, stress.start_min, stress.duration_min):
-            state.G_mgdl *= stress.multiplier
+        if stress:
+            state.G_mgdl += stress_glucose_delta(t_min, stress)
+
         state.G_mgdl = max(20.0, min(400.0, state.G_mgdl))
 
         times.append(now)

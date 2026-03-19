@@ -9,7 +9,7 @@ class Person:
     Gb_mgdl: float = 100.0
     carb_ratio_g_per_unit: float = 12.0
     ke_per_min: float = 0.02
-    insulin_signal_per_unit: float = 30.0
+    insulin_signal_per_unit: float = 14.0
     rex_mgdl_per_min: float = 1.0
 
     def V_dL(self) -> float:
