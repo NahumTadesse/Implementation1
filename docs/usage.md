@@ -4,6 +4,7 @@
 - Install Python
 - Install the required dependency:
     <br>pip install matplotlib
+- Clone the repository 
 - Run:
     <br>python main.py
 - Follow the prompts to enter scenario details.
