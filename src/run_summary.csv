@@ -1,0 +1,11 @@
+run_id,description,factors,min_glucose,max_glucose,end_glucose
+1,Baseline,50g meal + auto insulin,90.31,176.15,170.1
+2,Meal only,"50g meal, no insulin",114.45,313.91,299.11
+3,Insulin only,"5 units insulin, no meal",43.41,117.0,55.14
+4,Low carb,30g meal + auto insulin,97.03,152.69,149.44
+5,High carb,80g meal + auto insulin,83.58,200.28,190.29
+6,Mild stress,stress level 0.3 only,111.44,117.0,111.44
+7,High stress,stress level 0.8 only,112.28,133.9,125.75
+8,Exercise only,"30 min exercise, intensity 0.6",93.79,117.0,98.31
+9,Meal + insulin + mild stress,50g meal + auto insulin + stress 0.3,91.46,181.66,174.46
+10,Meal + insulin + exercise,50g meal + auto insulin + exercise 0.6,81.31,174.7,169.27
