@@ -110,7 +110,7 @@ def plot_cgm(times_dt, glucose, start_dt, meals=None, doses=None, exercise=None,
         label="Glucose Forecast"
     )
 
-    # Fill under curve slightly for a modern look
+
     ax.fill_between(times_dt, glucose, [min(glucose)] * len(glucose), alpha=0.12)
 
     # Target and threshold zones
@@ -118,7 +118,7 @@ def plot_cgm(times_dt, glucose, start_dt, meals=None, doses=None, exercise=None,
     ax.axhline(70, linestyle="--", linewidth=1.2, alpha=0.85, label="Low Threshold")
     ax.axhline(180, linestyle="--", linewidth=1.2, alpha=0.85, label="High Threshold")
 
-    # Dynamic y-limits with padding
+
     g_min = min(glucose)
     g_max = max(glucose)
     y_pad = max(10, (g_max - g_min) * 0.20)
