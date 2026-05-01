@@ -1,6 +1,4 @@
 # CGM Glucose Simulation
-CS 4632 Modeling and Simulation — Nahum Tadesse
-
 For a full detailed report of the project including model design, analysis, and results, see the **[Final Report](docs/M5_Report.pdf)**.
 
 A glucose simulation for diabetes management that models how meals, insulin, stress, and exercise affect blood glucose over a 3-hour window using a glucose-insulin minimal model.
